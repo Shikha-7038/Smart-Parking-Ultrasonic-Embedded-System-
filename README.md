@@ -209,52 +209,28 @@ Paste the provided source code into the code editor.
 Click "Start Simulation".
 Change sensor distances to simulate vehicle parking and leaving.
 
-## Proof from Simulation:
-
-All slots free
-https://screenshots/01_all_free.png
-
-One slot occupied
-https://screenshots/02_one_occupied.png
-
-Parking full alert
-https://screenshots/07_parking_full.png
-
-## Test Cases
-A comprehensive test plan was executed to verify the functionality of the system. Below are the key test cases.
-
-TC ID	Description	Input/Simulation Action	Expected Output	Status
-TC01	All Slots Free	Set all sensor distances > 30 cm.	All Green LEDs ON. LCD shows "Avail: 4/4". Buzzer OFF.	PASS
-TC02	One Slot Occupied	Set Sensor 1 distance < 30 cm.	Slot 1 Red LED ON, Green OFF. LCD shows "S1:OCC".	PASS
-TC03	Multiple Occupied	Set Sensors 1, 2 & 3 occupied.	LCD shows "Avail: 1/4". Correct LEDs for each slot.	PASS
-TC04	Parking Full	Set all sensors < 30 cm.	All Red LEDs ON. LCD shows "PARKING FULL". Buzzer ON.	PASS
-TC05	Vehicle Leaves	Go from full to free one slot.	Buzzer OFF. LCD updates to show "Avail: 1/4".	PASS
-TC06	No Echo / Error	Set sensor distance to > 200 cm.	Slot treated as FREE. Green LED ON.	PASS
-Link to detailed test report
-
-
 ## Limitations
-Number of Slots: The current implementation is designed for 4 slots. Scaling to a larger number of slots might require a more powerful microcontroller or a different system architecture.
-Sensor Range: The HC-SR04 is limited to a range of a few meters, making it suitable for smaller parking lots.
-Environmental Factors: The ultrasonic sensors can be affected by temperature, humidity, and acoustic noise, which may require periodic recalibration.
-No User Authentication: The system only manages occupancy and does not integrate with a ticketing or user management system.
+- Number of Slots: The current implementation is designed for 4 slots. Scaling to a larger number of slots might require a more powerful microcontroller or a different system architecture.
+- Sensor Range: The HC-SR04 is limited to a range of a few meters, making it suitable for smaller parking lots.
+- Environmental Factors: The ultrasonic sensors can be affected by temperature, humidity, and acoustic noise, which may require periodic recalibration.
+- No User Authentication: The system only manages occupancy and does not integrate with a ticketing or user management system.
 
 ## Future Improvements
-IoT Integration: Using an ESP32 to send real-time parking data to a cloud server for monitoring via a web or mobile application.
-Database Integration: Storing historical data to analyze parking patterns and generate reports.
-Automatic Gate Control: Integrating a servo motor to create a barrier that opens only when a slot is available.
-Advanced User Interface: Developing a more interactive GUI or mobile app.
-Edge AI: Using a camera and machine learning for more robust vehicle detection and to recognize license plates.
-Smart Lighting: Integrating the system with energy-efficient lighting controls.
+- IoT Integration: Using an ESP32 to send real-time parking data to a cloud server for monitoring via a web or mobile application.
+- Database Integration: Storing historical data to analyze parking patterns and generate reports.
+- Automatic Gate Control: Integrating a servo motor to create a barrier that opens only when a slot is available.
+- Advanced User Interface: Developing a more interactive GUI or mobile app.
+- Edge AI: Using a camera and machine learning for more robust vehicle detection and to recognize license plates.
+- Smart Lighting: Integrating the system with energy-efficient lighting controls.
 
 ## Learning Outcomes
-Through this project, the developer gained practical experience in:
-Designing and building a complete embedded system from scratch.
-Interfacing with various hardware components (sensors, actuators, display).
-Writing structured, modular, and well-documented C++/Arduino code.
-Applying fundamental concepts like threshold logic and state tracking.
-Using simulation tools for design and testing.
-Creating professional project documentation and a GitHub portfolio.
+- Through this project, the developer gained practical experience in:
+- Designing and building a complete embedded system from scratch.
+- Interfacing with various hardware components (sensors, actuators, display).
+- Writing structured, modular, and well-documented C++/Arduino code.
+- Applying fundamental concepts like threshold logic and state tracking.
+- Using simulation tools for design and testing.
+- Creating professional project documentation and a GitHub portfolio.
 
 ## Author
 Shikha
