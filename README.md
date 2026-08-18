@@ -177,37 +177,37 @@ Smart-Parking-Ultrasonic-Embedded-System/
 
 ## Installation & Setup
 Hardware Setup
-Assemble the circuit on a breadboard as per the circuit diagram.
-Connect the Arduino UNO to your computer via USB.
-Open the Arduino IDE and select the correct board and COM port.
-Install the LiquidCrystal I2C library from the Library Manager.
+- Assemble the circuit on a breadboard as per the circuit diagram.
+- Connect the Arduino UNO to your computer via USB.
+- Open the Arduino IDE and select the correct board and COM port.
+- Install the LiquidCrystal I2C library from the Library Manager.
 
 Software & Code
-Clone this repository or download the .ino file.
-Open the .ino file in the Arduino IDE.
-Click the Upload button to compile and flash the code to your Arduino.
-Open the Serial Monitor (baud rate: 9600) to view debug information.
+- Clone this repository or download the .ino file.
+- Open the .ino file in the Arduino IDE.
+- Click the Upload button to compile and flash the code to your Arduino.
+- Open the Serial Monitor (baud rate: 9600) to view debug information.
 
 ## How to Run
 Real Hardware: Power the Arduino. Place an object (e.g., a book) in front of a sensor. Observe the corresponding LEDs and the LCD changing state.
 
 # Virtual Simulation (Wokwi):
-Open the project on Wokwi using the provided wokwi_simulation.json file.
-Start the simulation.
-Click on an HC-SR04 sensor in the diagram and set its distance to a low value (e.g., 5 cm) to simulate a car.
-Observe the outputs on the virtual LCD, LEDs, and Serial Monitor.
+- Open the project on Wokwi using the provided wokwi_simulation.json file.
+- Start the simulation.
+- Click on an HC-SR04 sensor in the diagram and set its distance to a low value (e.g., 5 cm) to simulate a car.
+- Observe the outputs on the virtual LCD, LEDs, and Serial Monitor.
 
 # Virtual Simulation
 The project has been thoroughly tested on Wokwi, a powerful online simulation platform. This allows the project to be built, demonstrated, and tested without any physical hardware.
 
 # Steps to Run on Wokwi:
-Go to wokwi.com.
-Create a new "Arduino UNO" project.
-Add the components (HC-SR04 sensors, LEDs, LCD, Buzzer).
-Wire the circuit as per the pin mapping table.
-Paste the provided source code into the code editor.
-Click "Start Simulation".
-Change sensor distances to simulate vehicle parking and leaving.
+- Go to wokwi.com.
+- Create a new "Arduino UNO" project.
+- Add the components (HC-SR04 sensors, LEDs, LCD, Buzzer).
+- Wire the circuit as per the pin mapping table.
+- Paste the provided source code into the code editor.
+- Click "Start Simulation".
+- Change sensor distances to simulate vehicle parking and leaving.
 
 ## Limitations
 - Number of Slots: The current implementation is designed for 4 slots. Scaling to a larger number of slots might require a more powerful microcontroller or a different system architecture.
